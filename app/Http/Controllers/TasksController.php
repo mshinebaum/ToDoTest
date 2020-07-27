@@ -21,6 +21,11 @@ class TasksController extends Controller
 
     public function create(Request $request)
     {
+        $this->validate ($request, [
+            'description' => ['required', 'min:5'],
+
+        ]);
+
     	$task = new Task();
     	$task->description = $request->description;
     	$task->user_id = Auth::id();

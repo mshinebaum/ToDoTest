@@ -2,7 +2,16 @@
 
 @section('content')
 <div class="container">
-                <h2>Add New Task</h2>
+    <h2>Add New Task</h2>
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 
 <form method="POST" action="/task">
 
