@@ -53,6 +53,11 @@ class TasksController extends Controller
     	}
     	else
     	{
+            $this->validate ($request, [
+                'description' => ['required', 'min:5'],
+
+            ]);
+            
     		$task->description = $request->description;
 	    	$task->save();
 	    	return redirect('/');
