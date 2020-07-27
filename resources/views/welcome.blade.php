@@ -8,7 +8,8 @@
                 <a href="/task" class="btn btn-primary">Add new Task</a>
                 <table class="table mt-4">
                     <thead><tr>
-                        <th colspan="2">Tasks</th>
+                        <th colspan="1">Tasks</th>
+                        <th colspan="2">Name</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -16,6 +17,9 @@
                     <tr>
                         <td>
                             {{$task->description}}
+                        </td>
+                        <td>
+                            {{$user->name}}
                         </td>
                         <td>
 
